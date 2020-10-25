@@ -1,0 +1,539 @@
+@import "./_common";
+
+//-------
+// セクション共通
+//-------
+section {
+    padding-top: 220px;
+    padding-bottom: 125px;
+    position: relative;
+    
+    @include mq (sp) {
+        padding-top: 175px;
+        padding-bottom: 80px;
+    }
+    
+    &::before {
+        content: "";
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-right: 50vw solid transparent;
+        border-left: 50vw solid transparent;
+        border-top-width: 104px;
+        border-top-style: solid;
+        
+        @include mq (tab) {
+            border-top-width: 88px;
+        }
+        
+        @include mq (sp) {
+            border-top-width: 64px;
+        }
+    }
+}
+
+//------
+// メインビジュアル
+//------
+.main-visual {
+    background: $color-navy;
+    height: 700px;
+    position: relative;
+
+    .main-visual-content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        text-align: center;
+        color: $color-pink;
+
+        .main-logo {
+            margin: 0 auto;
+        }
+
+        .main-title {
+            margin-top: 30px;
+            line-height: 1.5;
+            font-family: $font-family-serif;
+            font-size: 70px;
+            font-weight: normal;
+
+            @include mq (tab) {
+                font-size: 58px;
+                margin-top: 25px;
+            }
+
+            @include mq (sp) {
+                font-size: 40px;
+                margin-top: 14px;
+                padding-bottom: 38px;
+            }
+        }
+    }
+
+    @include mq (tab) {
+        height: 600px;
+
+        .main-logo {
+            width: 230px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include mq (sp) {
+        height: 415px;
+
+        .main-logo {
+            width: 155px;
+        }
+    }
+}
+
+//-----
+// 制作実績
+//-----
+#product {
+    background: $color-pink;
+    color: $color-navy;
+    padding-bottom: 100px;
+
+    &::before {        
+        border-top-color: $color-navy;
+    }
+}
+
+.product-items {
+    margin-top: 76px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+    @include mq (tab) {
+        margin-top: 45px;
+    }
+
+    @include mq (sp) {
+        margin-top: 24px;
+    }
+}
+
+.product-more-link {
+    text-align: center;
+    margin-top: 45px;
+    
+    a {
+        font-family: $font-family-bold;
+        font-weight: 600;
+        display: inline-block;
+        color: #fff;
+        border: 2px solid $color-navy;
+        background: $color-navy;
+        line-height: 1;
+        padding: 22px;
+        width: 400px;
+        font-size: 20px;
+    }
+
+    @include mq (tab) {
+        margin-top: 0;
+    }
+
+    @include mq (sp) {
+        margin-top: 55px;
+
+        a {
+            width: 175px;
+            font-size: 19px;
+        }
+    }
+}
+
+//-----
+// 制作フロー
+//-----
+#flow {
+    background: $color-navy;
+    color: $color-pink;
+    padding: 220px 0 60px;
+
+    @include mq (sp) {
+        padding: 210px 0 25px;
+    }
+
+    &::before {      
+        border-top-color: $color-pink;
+    }
+}
+
+.flow-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 126px;
+
+    @include mq (sp) {
+        margin-top: 122px;
+    }
+}
+
+.flow-item {
+    border: 2px solid $color-pink;
+    text-align: center;
+    width: calc((100% - 20px * 2) / 3);
+    margin: 0 20px 130px 0;
+    padding-bottom: 80px;
+    position: relative;
+    
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+    
+    @include mq (tab) {
+        width: calc((100% - 20px) / 2);
+        
+        &:nth-child(3n) {
+            margin-right: 20px;
+        }
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+    
+    @include mq (sp) {
+        width: 100%;
+        height: 418px;
+        margin: 0 0 128px 0;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+}
+
+.flow-item-number {
+    display: inline-block;
+    padding: 0 10px;
+    background: $color-navy;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+
+    @include mq (sp) {
+        top: -44px;
+    }
+    
+    p {
+        color: $color-navy;
+        background: $color-pink;
+        border-radius: 100%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 50px;
+        vertical-align: middle;
+        width: 90px;
+        height: 90px;
+        line-height: 80px;
+        padding-bottom: 10px;
+        margin: 0;
+
+        @include mq (sp) {
+            font-size: 47px;
+            width: 83px;
+            height: 83px;
+            line-height: 72px;
+        }
+    }
+}
+
+.flow-item-title {
+    margin-top: 78px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+
+    @include mq (sp) {
+        margin-top: 70px;
+        font-size: 26px;
+    }
+}
+
+.flow-item-text {
+    margin: 20px auto 0;
+    font-size: 18px;
+    width: 200px;
+    text-align: left;
+
+    @include mq (sp) {
+        font-size: 17px;
+        margin-top: 13px;
+        width: 190px;
+    }
+}
+
+//-----
+// ここはれデザインについて
+//-----
+#about {
+    color: $color-navy;
+    font-family: $font-family-serif;
+    padding-bottom: 75px;
+    text-align: center;
+
+    &::before {        
+        border-top-color: $color-navy;
+    }
+
+    @include mq (tab) {
+        padding: 200px 0 100px;
+    }
+
+    @include mq (sp) {
+        padding: 200px 0 92px;
+    }
+
+    .section-title {
+        margin-top: 20px;
+        line-height: 1.09;
+        font-size: 80px;
+
+        @include mq (tab) {
+            font-size: 78px;
+        }
+
+        @include mq (sp) {
+            margin-top: 0;
+            font-size: 75px;
+        }
+    }
+}
+
+.about-lead {
+    margin-top: 90px;
+    font-size: 22px;
+
+    @include mq (tab) {
+        margin-top: 80px;
+    }
+
+    @include mq (sp) {
+        margin-top: 68px;
+        font-size: 21px;
+        // letter-spacing: .14em;
+    }
+}
+
+.about-service {
+    margin: 135px 140px 0;
+    text-align: left;
+    position: relative;
+
+    @include mq (tab) {
+        text-align: center;
+        margin: 100px 70px 0;        
+    }
+    
+    @include mq (sp) {
+        margin: 70px 0 0;        
+    }
+    
+    .about-service-title {
+        display: inline-block;
+        background: #fff;
+        padding: 0 10px;
+        font-size: 40px;
+        line-height: 1;
+        margin-left: 42px;
+        position: relative;
+        top: 22px;
+
+        @include mq (tab) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @include mq (sp) {
+            font-size: 37.5px;
+        }
+    }
+    
+    .about-service-description {
+        text-align: left;
+        border: 1px solid $color-navy;
+        padding: 60px 80px 50px;
+        font-size: 17px;
+        font-family: $font-family-base;
+
+        @include mq (tab) {
+            padding: 50px 70px 45px ;            
+        }
+        
+        @include mq (sp) {
+            padding: 46px 30px 37px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    }
+}
+
+.about-meta {
+    margin-top: 110px;
+
+    @include mq (sp) {
+        margin-top: 87px;
+    }
+    
+    .about-meta-title {
+        font-size: 40px;
+        
+        @include mq (sp) {
+            font-size: 37.5px;
+            line-height: 1.25;
+        }
+    }
+
+    .about-meta-items {
+        margin-top: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        text-align: left;
+        font-family: sans-serif;
+
+        @include mq (tab) {
+            margin-top: 30px;
+        }
+
+        @include mq (sp) {
+            display: block;
+            margin-top: 46px;
+        }
+        
+        .about-meta-item {
+            width: 500px;
+            max-width: 100%;
+            padding: 10px 80px 0;
+
+            @include mq (tab) {
+                padding: 10px 30px;
+            }
+
+            @include mq (sp) {
+                padding: 24px 0 33px;
+            }
+        }
+
+        .about-meta-person { 
+            @include mq (sp) {
+                font-size: 15px;
+            }
+        }
+        
+        .about-meta-address {
+            border-left: 2px solid $color-navy;
+    
+            @include mq (sp) {
+                border-left: none;
+                border-top: 2px solid $color-navy;
+                padding-left: 5px;
+            }
+            
+            p {
+                font-size: 18px;
+                margin-bottom: 10px;
+
+                @include mq (sp) {
+                    font-size: 17px;    
+                }
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.about-contact-link {
+    margin-top: 110px;
+
+    @include mq (tab) {
+        margin: 80px 70px 0;
+    }
+
+    @include mq (sp) {
+        margin-top: 15px;
+    }
+
+    a {
+        font-family: $font-family-bold;
+        display: block;
+        padding: 20px;
+        background: $color-navy;
+
+        @include mq (sp) {
+            display: inline-block;
+            width: 174px;
+            max-width: 100%;
+            padding: 10px;
+        }
+        
+        p {
+            font-size: 29px;
+            color: #fff;
+            font-family: sans-serif;
+            position: relative;
+            display: inline-block;
+            padding-left: 60px;
+
+            @include mq (tab) {
+                font-size: 24px;
+                padding-left: 50px;
+            }
+
+            @include mq (sp) {
+                font-size: 16px;
+                padding-left: 30px;
+            }
+
+            &::before {
+                content: "";
+                width: 36px;
+                height: 26px;
+                background: url(../img/w-mail.svg) no-repeat center / contain;
+                position: absolute;
+                left: 0;
+                top: 47%;
+                -webkit-transform: translateY(-50%);
+                        transform: translateY(-50%);
+
+                @include mq (tab) {
+                    width: 30px;
+                    height: 23px;
+                }
+
+                @include mq (sp) {
+                    width: 20px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+}

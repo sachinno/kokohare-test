@@ -1,0 +1,414 @@
+@import "./_common";
+
+//---------
+// 制作実績(一覧)
+//---------
+.title-top {
+    background: $color-navy;
+    height: 430px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    @include mq (tab) {
+        height: 330px;
+    }
+
+    @include mq (sp) {
+        height: 282px;
+    }
+
+    .top-title {
+        color: $color-pink;
+        padding-bottom: 30px;
+
+        @include mq (tab) {
+            padding-bottom: 45px;
+        }       
+    }
+}
+
+.product-list-items {
+    padding-top: 140px;
+    padding-bottom: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+    @include mq (sp) {
+        padding-top: 68px;
+        padding-bottom: 0;
+    }
+}
+
+//----------
+// 制作実績（拡大画像）
+//----------
+.main-product {
+    padding-bottom: 100px;
+    font-family: $font-family-serif;
+    color: $color-navy;
+
+    @include mq (tab) {
+        padding-bottom: 80px;
+
+        .product-inner {
+            padding: 0;
+        }
+    }
+
+    @include mq (sp) {
+        padding-bottom: 58px;
+    }
+}
+
+.product-title {
+    margin: 0 36px;
+    padding-top: 55px;
+    text-align: center;
+    position: relative;
+
+    @include mq (sp) {
+        margin: 0;
+        padding-top: 48px;
+    }
+
+    h2 {
+        font-size: 67px;
+        font-weight: normal;
+        line-height: 1.5;
+        padding-top: 10px;
+
+        @include mq (sp) {
+            font-size: 62px;
+            line-height: 1.5;
+            margin-top: 7px;
+        }
+    }
+    
+    .product-tag {
+        font-size: 20px;
+        line-height: 1.2;
+
+        a {
+            color: $color-tag;
+        }
+    }
+}
+
+.back-link {
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    a {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+
+        @include mq (tab) {
+            width: 20px;
+            height: 20px;
+        }
+        
+        img {
+            width: 100%;
+        }
+    }
+        
+    @include mq (sp) {
+        position: static;
+        text-align: left;
+        padding-left: 28px;
+
+        a {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+.product-img {
+    margin-top: 30px;
+
+    @include mq (sp) {
+        margin-top: 40px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.product-info {
+    margin-top: 110px;
+    height: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    
+    .product-info-name {
+        font-size: 20px;
+        width: 37%;
+        height: inherit;
+        padding: 20px 0 20px 72px;
+        border-left: 2px solid $color-navy;
+    }
+
+    .product-info-text {
+        font-size: 22px;
+        width: 63%; 
+        height: inherit;
+        padding: 20px 72px 20px 55px;        
+    }
+
+    @include mq (tab) {
+        margin-top: 70px;
+
+        .product-info-name {
+            width: 40%;
+            padding: 20px 25px;
+        }
+
+        .product-info-text {
+            width: 60%;
+            padding: 20px 25px;
+        }
+    }
+    
+    @include mq (sp) {
+        display: block;
+        padding: 0 26px;
+        height: auto;
+        margin-top: 22px;
+        
+        .product-info-name {
+            width: 100%;
+            border-left: none;
+            border-bottom: 2px solid $color-navy;
+            padding: 0 12px 40px;
+            font-size: 19px;
+        }
+
+        .product-info-text {
+            width: 100%;
+            padding: 50px 10px;
+            font-size: 19px;
+        }
+    }
+}
+
+//----------
+// お問合せページ
+//----------
+.contact {
+    color: $color-navy;
+    font-family: $font-family-serif;
+    padding-bottom: 120px;
+
+    @include mq (sp) {
+        padding-bottom: 70px;
+    }
+}
+
+.contact-title {
+    margin-top: 90px;
+    position: relative;
+    text-align: center;
+
+    @include mq (tab) {
+        margin-top: 70px;
+    }
+    
+    @include mq (sp) {
+        margin-top: 30px;
+    }
+
+    .back-link {
+        position: absolute;
+        left: 0;
+        top:10px;
+    
+        a {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+    
+            @include mq (tab) {
+                width: 20px;
+                height: 20px;
+            }
+            
+            img {
+                width: 100%;
+            }
+        }
+            
+        @include mq (sp) {
+            position: static;
+            text-align: left;
+            padding-left: 28px;
+    
+            a {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+    .back-link {
+        top: 10px;
+
+        @include mq (sp) {
+            padding-left: 0;
+        }
+    }
+
+    .contact-comment {
+        font-size: 22px;
+        padding-top: 15px;
+
+        @include mq (sp) {
+            font-size: 19px;
+        }
+    }
+}
+
+.contact-form {
+    width: 800px;
+    max-width: 100%;
+    margin: 120px auto 0;
+
+    @include mq (tab) {
+        margin-top: 80px;
+    }
+
+    @include mq (sp) {
+        margin-top: 50px;
+    }
+}
+
+input, textarea {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: none;
+    text-decoration: none;
+    background: #FBEAF2;
+    border: none;
+    border-radius: 0;
+    display: block;
+    font-family: $font-family-serif;
+    color: $color-navy;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 22px;
+    padding: 12px 10px;
+
+    @include mq (tab) {
+        font-size: 18px;
+    }
+
+    @include mq (sp) {
+        font-size: 16px;
+        margin-top: 0;
+        padding: 8px 4px;
+    }
+
+    &:focus {
+        border: 1px solid $color-navy;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        outline: none;
+        }
+}
+
+label {
+    display: block;
+    font-size: 24px;
+
+    @include mq (tab) {
+        font-size: 20px;
+    }
+
+    @include mq (sp) {
+        font-size: 16px;
+    }
+}
+
+.contact-company, .contact-name, .contact-mail, .contact-address, .contact-tel {
+    margin-top: 38px;    
+    
+    @include mq (tab) {
+        margin-top: 30px;    
+    }
+
+    @include mq (sp) {
+        margin-top: 18px;
+    }
+}
+
+.contact-content {
+    margin-top: 74px;
+    
+    textarea {
+        height: 370px;
+    }
+
+    @include mq (tab) {
+        margin-top: 35px;
+
+        textarea {
+            height: 250px;
+        }        
+    }
+
+    @include mq (sp) {
+        margin-top: 24px;
+
+        textarea {
+            height: 150px;
+        }
+    }
+}
+
+.contact-button {
+    margin-top: 110px;
+
+    @include mq (tab) {
+        margin-top: 60px;
+    }
+
+    @include mq (sp) {
+        margin: 50px 30px 0;
+    }
+    
+    input {
+        cursor: pointer;
+        text-decoration: none;
+        max-width: 400px;
+        margin: 0 auto;
+        color: #fff;
+        background: $color-navy;
+        font-size: 24px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        
+        @include mq (sp) {
+            font-size: 16px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+}
